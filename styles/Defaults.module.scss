@@ -1,0 +1,363 @@
+$main-text: #25353D;
+$link: #869299;
+$link-hover: #6e777c;
+$link-active: #485861;
+
+.heroContainer {
+  max-width: 1200px;
+  margin-top: 8rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &:not(:first-child) {
+    padding-top: 5rem;
+  }
+
+  &:is(:last-child) {
+    margin-bottom: 12rem;
+  }
+
+  @media only screen and (max-width: 900px) {
+    &:nth-child(odd) {
+      flex-direction: column-reverse;
+    }
+
+    &:nth-child(even) {
+      flex-direction: column;
+    }
+  }
+}
+
+.button {
+  width: 100%;
+  height: 3.5rem;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0rem 3rem 0rem 3rem;
+  // .heroContainer:nth-child(odd) {
+  //     flex-direction: column-reverse;
+  // }
+  // .heroContainer:nth-child(even) {
+  //     flex-direction: column;
+  // }
+}
+
+.navButtonCircle {
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 1.3rem;
+  margin-right: 0.55rem;
+  background: #97CDFF;
+}
+
+.darkText {
+  color: rgba(42, 49, 75, 0.76);
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.lightText {
+  color: rgba(42, 49, 75, 0.39);
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.lightBlueBtn {
+  background: #DEE9FC;
+  border-radius: 0.27rem;
+  border: none;
+  color: #4B83EE;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  & span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5rem;
+  }
+
+  &:hover {
+    background: rgba(26, 102, 255, 0.24);
+  }
+}
+
+.defaultLabel {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  letter-spacing: -0.21px;
+  color: #A4B3C0;
+}
+
+.defaultInput {
+  outline: 0.1rem solid #A4B3C0;
+  box-sizing: border-box;
+  border-radius: 0.55rem;
+  border: none;
+  width: 100%;
+  height: 3.75rem;
+  padding-left: 1rem;
+  font-family: inherit;
+  color: rgba(164, 179, 192, 1);
+  font-size: 1.2rem;
+
+  &:placeholder {
+    color: rgba(164, 179, 192, 1);
+  }
+
+  &:focus {
+    outline: 0.1rem solid rgba(55, 123, 255, 0.41);
+  }
+}
+
+.paddedContainer {
+  padding: 7rem 2.875rem 0rem 2.875rem;
+  overflow: auto;
+}
+
+.defaultGridLabel {
+  color: rgba(42, 49, 75, 0.76);
+  font-size: 0.9rem;
+}
+
+.select {
+  height: 3rem;
+  width: 100%;
+  background: white;
+  border: none;
+  outline: 0.1rem solid #A4B3C0;
+  border-radius: 0.5rem;
+  padding: 0rem 1rem;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.21rem;
+  letter-spacing: -0.21px;
+  color: rgba(42, 49, 75, 0.42);
+
+  & option {
+    height: 1.21rem;
+  }
+
+  &:focus {
+    outline: 0.1rem solid rgba(55, 123, 255, 0.41);
+  }
+}
+
+.absoluteExpandedContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 14rem;
+  position: absolute;
+  border-radius: 0.3rem;
+  background: white;
+  font-size: 1rem;
+  box-shadow: 0rem 0.25rem 2.5rem rgba(0, 0, 0, 0.1);
+  color: #9DA3AE;
+  z-index: 99;
+  overflow: hidden;
+
+  & div {
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+    padding: 0rem 1rem;
+    justify-content: flex-start;
+
+    & p {
+      margin-left: 1rem;
+    }
+
+    & img {
+      width: 1.3125rem;
+    }
+
+    &:hover {
+      background: rgba(55, 123, 255, 0.24);
+    }
+  }
+}
+
+.grayLabel {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.9rem;
+  line-height: 16px;
+  letter-spacing: -0.21px;
+  color: #9DA3AE;
+  margin: 0rem;
+}
+
+.grayInput {
+  margin-top: 0.5625rem;
+  padding-left: 1rem;
+  width: 100%;
+  font-weight: 500;
+  color: #9DA3AE;
+  background: #F9FAFB;
+  border: none;
+  outline: none;
+  height: 2.625rem;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.linkInput {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5625rem;
+  padding-left: 1rem;
+  padding-right: 0.5rem;
+  width: 100%;
+  font-weight: 500;
+  color: #9DA3AE;
+  background: #F9FAFB;
+  border: none;
+  outline: none;
+  height: 2.625rem;
+  font-family: inherit;
+  font-size: 1rem;
+
+  &::placeholder {
+    color: #9DA3AE;
+  }
+}
+
+.linkInput::-webkit-input-placeholder {
+  color: inherit;
+}
+
+.linkSelector {
+  width: 30%;
+  min-height: 2.625rem;
+  overflow: auto;
+  background: white;
+  position: absolute;
+  z-index: 99;
+  box-shadow: 0rem 0.15rem 2.5rem rgba(0, 0, 0, 0.15);
+  border-radius: 0.3rem;
+  display: flex;
+  flex-direction: column;
+
+  & p {
+    display: flex;
+    align-items: center;
+    margin: 0rem;
+    cursor: pointer;
+    min-height: 2.5rem;
+    padding-left: 1rem;
+    color: #9DA3AE;
+
+    &:hover {
+      background: rgba(55, 123, 255, 0.24);
+    }
+  }
+}
+
+.spaceBetweenFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.staticHeroContainer {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-image: url('../images/gradients/landing-4.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  z-index: -1;
+  align-items: center;
+}
+
+.heroHeading {
+  color: rgba(255, 255, 255);
+  margin-top: 10rem;
+  font-size: 3rem;
+  line-height: 2.8125rem;
+  font-family: 'Eudoxus Sans', 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.staticHeroContent {
+  max-width: 1200px;
+  width: 100%;
+  background-color: white;
+  margin: 20rem auto 0rem auto;
+  border-radius: 3rem 3rem 0rem 0rem;
+  min-height: 75vh;
+  padding: 5rem 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
+}
+
+.blackText {
+  font-weight: 700;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: -0.21px;
+  color: #2A314B;
+}
+
+.whiteText {
+  font-weight: 500;
+  font-size: 0.89rem;
+  line-height: 1.2rem;
+  letter-spacing: -0.21px;
+  color: rgba(42, 49, 75, 0.42);
+}
+
+.newBtn {
+  margin-top: 1.5rem;
+  background: rgba(104, 128, 255, 1);
+  width: 100%;
+  height: 3.8125rem;
+  border-radius: 0.5rem;
+  border: none;
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: #FFFFFF;
+  &:hover {
+    opacity: 0.85;
+  }
+}

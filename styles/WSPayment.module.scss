@@ -1,0 +1,464 @@
+$main-text-color: hsla(216, 45%, 15%, 1);
+$bio-color: hsla(212, 6%, 52%, 1);
+$title: hsla(0, 0%, 46%, 1);
+
+$resize: 987px;
+
+$btn-width: 15.875rem;
+$btn-height: 3.5rem;
+
+.main {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  transition: filter 0.25s ease-in-out;
+  background: white;
+  @media only screen and (max-width: $resize) {
+    flex-direction: column;
+  }
+}
+
+.leftPane {
+  max-width: 30.56rem;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  @media only screen and (max-width: $resize) {
+    max-width: none;
+  }
+}
+
+.logo {
+  width: 3.75rem;
+  margin-top: 3.375rem;
+  margin-left: 5.1875rem;
+}
+
+.rightPane {
+  padding: 4.375rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.profilePicture {
+  width: 5.625rem;
+  height: 5.625rem;
+  border-radius: 5.625rem;
+}
+
+.name {
+  font-family: 'Eudoxus Sans', 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 2.05rem;
+  color: $main-text-color;
+  margin-top: 2.4rem;
+}
+
+.description {
+  font-weight: 400;
+  font-size: 1.45rem;
+  margin-top: 1.5rem;
+  max-width: 32.8125rem;
+  color: $bio-color;
+}
+
+.profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  @media only screen and (max-width: $resize) {
+    flex-direction: column;
+  }
+}
+
+.socials {
+  display: grid;
+  grid-gap: 2.6875rem;
+  grid-template-columns: repeat(7, max-content);
+  align-items: center;
+  justify-items: center;
+  margin: 3.125rem 0rem;
+  & > div > a > svg {
+    cursor: pointer;
+    & > path {
+      transition: all 0.15s ease-in-out;
+    }
+    &:hover {
+      & > path {
+        fill: #7B818E;
+      }
+    }
+  }
+}
+
+.buttonGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, min($btn-width));
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 2.625rem;
+}
+
+.payWithbtn {
+  border-radius: 0.5rem;
+  width: $btn-width;
+  height: $btn-height;
+  cursor: pointer;
+  padding: none;
+  transition: all 0.15s ease-in-out;
+  &:hover {
+    opacity: 0.78;
+  }
+}
+.payWithbtnFlex {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.solanaPayButton {
+  border: 0.1rem solid #E2E2E2;
+  box-sizing: border-box;
+  background: none;
+  transition: all 0.15s ease-in-out;
+  & img {
+    width: 4.5rem;
+  }
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.payWithCrypto {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  color: #757575;
+  margin-bottom: 2.625rem;
+  margin-top: 4.3125rem;
+}
+
+.payWithbtnIcon {
+  width: 2rem;
+  margin-left: 1rem;
+}
+.payWithbtnText {
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  margin-left: 1.25rem;
+}
+
+.requestBtn {
+  width: 15.125rem;
+  height: 3.5625rem;
+  border-radius: 10rem;
+  border: none;
+  outline: 0.1rem solid #787A85;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: #787A85;
+  cursor: pointer;
+  background: none;
+  margin-top: 1.8rem;
+  transition: all 0.15s ease-in-out;
+  &:hover {
+    outline: 0.1rem solid black;
+  }
+}
+
+.requestBtnArrow {
+  margin-left: 1.625rem;
+  margin-top: 0.25rem;
+}
+.requestText {
+  margin-left: 2rem;
+}
+
+.modal {
+  width: 23.6875rem;
+  height: 37.875rem;
+}
+
+.modalHeroContainer {
+  width: 100%;
+  height: 10.75rem;
+  border-radius: 1.05rem 1.05rem 0rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalTokenIcon {
+  width: 2.25rem;
+}
+
+.modalTokenSymbol {
+  font-weight: 600;
+  font-size: 1.505rem;
+  margin-left: 0.95rem;
+}
+
+.modalBody {
+  width: 100%;
+  padding: 1.25rem;
+}
+
+.modalTitle {
+  font-weight: 600;
+  font-size: 1.505rem;
+  color: #212E3D;
+  margin: 0rem;
+}
+
+.tokenSelector {
+  margin-top: 1.25rem;
+  width: 100%;
+  height: 3.8125rem;
+  border: 0.1rem solid #E2E2E2;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 1.25rem;
+}
+
+.tokenSelectorDetails {
+  display: flex;
+  align-items: center;
+}
+
+.tokenSelectorTokenName {
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  letter-spacing: -0.21px;
+  color: #5D6377;
+  margin-left: 1.25rem;
+}
+
+.modalInput {
+  margin-top: 1.25rem;
+  width: 100%;
+  height: 3.8125rem;
+  border: 0.1rem solid #E2E2E2;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  outline: none;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  padding-left: 1.25rem;
+  color: #5D6377;
+  &:focus {
+    outline: 0.1rem solid rgb(218, 232, 246);
+  }
+  &::placeholder {
+    color: #D1D1D1;
+  }
+}
+
+.modalMessage {
+  margin-top: 1.25rem;
+  width: 100%;
+  height: 6rem;
+  border: 0.1rem solid #E2E2E2;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  outline: none;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  padding-left: 1.25rem;
+  padding-top: 1rem;
+  resize: none;
+  color: #5D6377;
+  &:focus {
+    outline: 0.1rem solid rgb(218, 232, 246);
+  }
+  &::placeholder {
+    color: #D1D1D1;
+  }
+}
+
+.mainBtn {
+  margin-top: 1.5rem;
+  background: rgba(104, 128, 255, 1);
+  width: 100%;
+  height: 3.8125rem;
+  border-radius: 0.5rem;
+  border: none;
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: #FFFFFF;
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+.modalTokenParent {
+  position: relative;
+}
+
+.tokenSelectorTokens {
+  position: absolute;
+  width: 100%;
+  height: 13rem;
+  background: white;
+  border: 0.1rem solid #E2E2E2;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  & img {
+    margin-left: 1rem;
+  }
+}
+
+.tokenSelectorDetailsExp {
+  transition: all 0.15s ease-in-out;
+  &:hover {
+    background: rgba(104, 128, 255, 0.17);
+  }
+  & p {
+    margin-top: 0.86rem;
+    margin-bottom: 0.86rem;
+  }
+}
+
+.unavailableImage {
+  max-width: 54rem;
+  width: 100%;
+}
+
+.swagHand {
+  align-self: center;
+  width: 30rem;
+  height: 30rem;
+}
+
+.swagHandContainer {
+  @media only screen and (max-width: $resize) {
+    display: none !important;
+  }
+}
+
+.bigDarkText {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: #152338;
+}
+
+.lightText {
+  color: #7D848C;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+  max-width: 32.6rem;
+}
+
+.reservedContainer {
+  margin-top: 4.5rem;
+  display: flex;
+  overflow: visible;
+  position: relative;
+  align-items: center;
+  justify-content: flex-end;
+  max-width: 45.625rem;
+  width: 100%;
+  @media only screen and (max-width: 1280px) {
+    flex-direction: column;
+    align-items: flex-start;
+    & > div {
+      margin-top: 14rem;
+    }
+  }
+}
+
+.burgerImage {
+  position: absolute;
+  left: -7rem !important;
+  top: 0;
+  z-index: 99;
+}
+
+.tryAnotherBtn {
+  width: 21.0625rem;
+  height: 3.8125rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: 0.1rem solid rgb(64, 64, 64, 0.75);
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: #404040;
+  cursor: pointer;
+  background: none;
+  margin-top: 1.8rem;
+  transition: all 0.15s ease-in-out;
+  &:hover {
+    outline: 0.1rem solid black;
+  }
+}
+
+.spayQR {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toast {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  min-height: 4rem;
+  width: calc(100% - 30.56rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 4rem;
+  @media only screen and (max-width: 1300px) {
+    width: 100%;
+    padding: 0.5rem 2rem;
+  }
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem 1rem;
+  }
+}
+
+.whiteText {
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.65rem;
+  color: #FFFFFF;
+  margin: 0rem;
+}
+
+.txLink {
+  @media only screen and (max-width: 600px) {
+    margin-top: 0.5rem;
+  }
+}
+
+
+.paymentModalFix {
+
+}

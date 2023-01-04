@@ -1,0 +1,92 @@
+.editParent {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.editContainer {
+    padding: 7rem 2.875rem 0rem 2.875rem;
+    width: calc(15rem + 22vw);
+    margin-bottom: 3rem;
+}
+
+.defaultFlex {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inputContainer {
+    background: white;
+    padding: 1.5rem 2.5rem 3.5rem 2.5rem;
+    margin-top: 3.5rem;
+}
+
+.main {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc(15rem + 30vw);
+    & > .logo {
+        width: 8.75rem;
+        height: max-content;
+        position: absolute;
+        top: 8rem;
+    }
+}
+
+.defaultLabel {
+    margin-top: 1.5rem;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.9rem;
+    line-height: 16px;
+    letter-spacing: -0.21px;
+    color: #9DA3AE;
+}
+
+.defaultInput {
+    padding-left: 1rem;
+    width: 100%;
+    color: #9DA3AE;
+    background: #F9FAFB;
+    border: none;
+    outline: none;
+    height: 2.625rem;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.textArea {
+    padding: 1rem 0rem 0rem 1rem;
+    width: 100%;
+    color: #9DA3AE;
+    background: #F9FAFB;
+    border: none;
+    outline: none;
+    min-height: 5.6875rem;
+    resize: vertical;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.gradientGrid {
+    display: grid;
+    grid-template-columns: 1rem 1rem 1rem 1rem 1rem;
+    grid-gap: 1rem;
+    width: 100%;
+    margin-top: 0.5rem;
+    & img {
+        cursor: pointer;
+    }
+}

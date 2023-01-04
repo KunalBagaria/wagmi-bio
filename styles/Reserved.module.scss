@@ -1,0 +1,122 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10rem;
+  padding: 3rem;
+}
+
+.heading {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  letter-spacing: -0.21px;
+  color: #394150;
+  margin-top: 2rem;
+}
+
+.sub {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  letter-spacing: -0.21px;
+  color: #9DA3AE;
+  margin-top: 0.5rem;
+  max-width: 28.43rem;
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.linkBox {
+  padding: 1.875rem;
+  border: 0.1rem solid #E7E7E7;
+  box-sizing: border-box;
+  border-radius: 0.625rem;
+  max-width: 28.43rem;
+  width: 100%;
+  min-height: 7.31rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    box-shadow: 0rem 0.25rem 1.5rem rgba(0, 0, 0, 0.03);
+  }
+  @media only screen and (max-width: 400px) {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+.profilePicture {
+  width: 3.56rem;
+  height: 3.56rem;
+  border-radius: 3.56rem;
+  object-fit: cover;
+}
+
+.darkText {
+  margin: 0rem;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.15rem;
+  letter-spacing: -0.21px;
+  color: #394150;
+}
+
+.lightText {
+  margin: 0rem;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.15rem;
+  letter-spacing: -0.21px;
+  color: #9DA3AE;
+}
+
+.blackText {
+  margin: 0rem;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.15rem;
+  letter-spacing: -0.21px;
+  color: #6C727F;
+}
+
+.expiresBox {
+  @media only screen and (max-width: 400px) {
+    margin-top: 2rem;
+  }
+}
+
+.tweetThis {
+  width: 18.9rem;
+  height: 2.5rem;
+  background: #4B83EE;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.95rem;
+  line-height: 1rem;
+  letter-spacing: -0.21px;
+  color: #FFFFFF;
+  margin-top: 3rem;
+  &:hover {
+    opacity: 0.85;
+  }
+}

@@ -1,0 +1,148 @@
+.mainContainer {
+    margin-top: 2.5rem;
+    width: 48rem;
+    min-height: 15rem;
+    background: white;
+}
+
+.mainHeader {
+    padding: 1.8rem;
+    height: 50%;
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.06);
+}
+
+.pfp {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 100%;
+}
+
+.headerIcons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 22%;
+    & span {
+        cursor: pointer;
+        font-family: Inter;
+        font-weight: 500;
+        font-size: 0.97rem;
+        line-height: 1rem;
+        letter-spacing: -0.21px;
+        color: #9DA3AE;
+        display: flex;
+        align-items: center;
+    }
+    & img {
+        cursor: pointer;
+        width: 1.1875rem;
+        height: 1.1875rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+}
+
+.mainBody {
+    padding-top: 0.625rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & > * {
+        width: 50%;
+        // height: 100%;
+        border: none;
+        &:nth-child(2) {
+            border-left: 0.1rem solid rgba(0, 0, 0, 0.06);
+        }
+    }
+}
+
+.lightHeading {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.21px;
+    color: #394150;
+}
+
+.planContainer {
+    padding: 1.8rem;
+    margin-top: 2.5rem;
+    width: 32.5rem;
+    min-height: 14rem;
+    background: white;
+}
+
+.planHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.darkText {
+    margin: 0rem;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.97rem;
+    line-height: 1rem;
+    letter-spacing: -0.21px;
+    color: #394150;
+}
+
+.planDivider {
+    height: 1px;
+    width: 10rem;
+    background: rgba(0, 0, 0, 0.12);
+}
+
+.lightText {
+    margin: 0rem;
+    margin-top: 0.5rem;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 0.92rem;
+    line-height: 1rem;
+    letter-spacing: -0.21px;
+    color: #9DA3AE;
+}
+
+.mediumText {
+    font-family: Inter;
+    margin: 0rem;
+    font-weight: 600;
+    font-size: 0.97rem;
+    line-height: 1rem;
+    letter-spacing: -0.21px;
+    color: #6C727F;
+}
+
+.upgradeButton {
+    margin-top: 2.5rem;
+    height: 2.5rem;
+    width: 100%;
+    cursor: pointer;
+    background: #FFFFFF;
+    border: 0.1rem solid #E5E7EB;
+    box-sizing: border-box;
+    border-radius: 0.25rem;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 0.97rem;
+    line-height: 1rem;
+    letter-spacing: -0.21px;
+    color: #9DA3AE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & span {
+        margin-right: 0.5rem;
+    }
+    &:hover {
+        background: rgb(157, 163, 174, 0.1);
+    }
+    &:disabled {
+        background: rgb(157, 163, 174, 0.1);
+        cursor: not-allowed;
+    }
+}

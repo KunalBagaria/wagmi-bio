@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.selector {
+  width: 16.25rem;
+  background: white;
+  & img {
+    width: 6.375rem;
+  }
+}
+
+.selectorItem {
+  width: 100%;
+  height: 3.125rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.06);
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.06);
+}
+
+.webhookContainer {
+  width: 50rem;
+  min-height: 10rem;
+  margin-left: 1.5rem;
+  background: white;
+  padding: 1rem;
+}

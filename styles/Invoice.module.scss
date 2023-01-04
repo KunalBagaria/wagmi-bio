@@ -1,0 +1,422 @@
+.invoiceInputContainer {
+    width: calc(10rem + 25vw);
+}
+
+.spaceBetweenFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 1.8rem;
+    & .inputSection {
+        width: 46%;
+    }
+    &:first-child {
+        margin: 0rem;
+    }
+}
+
+.invoiceForm {
+    width: 100%;
+    padding: 1.8rem;
+    background: white;
+    margin-top: 1.875rem;
+    min-height: calc(100vh - 22rem);
+    margin-bottom: 5rem;
+}
+
+.fullWidthSection {
+    margin-top: 1.8rem;
+}
+
+.particularsGrid {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    grid-column-gap: 0.375rem;
+    & p {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.95rem;
+        line-height: 1rem;
+        letter-spacing: -0.21px;
+        color: #9DA3AE;
+        &:last-child {
+            text-align: right;
+        }
+    }
+}
+
+.divider {
+    height: 0.1rem;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.06);
+}
+
+.total {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.21rem;
+    letter-spacing: -0.21px;
+    color: #4D5562;
+}
+
+.addButton {
+    cursor: pointer;
+    width: 6.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.95rem;
+    line-height: 1rem;
+    letter-spacing: -0.21px;
+    color: #4B83EE;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background: url('../images/gradients/invoice.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    & .logo {
+        cursor: pointer;
+        width: 10rem;
+        height: max-content;
+        margin-top: 2.4rem;
+    }
+}
+
+.invoiceComponentBox {
+    position: relative;
+    width: 33rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    background: white;
+    min-height: 35rem;
+    border-radius: 0.5rem;
+}
+
+.topGraySection {
+    height: 2.75rem;
+    width: 100%;
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+    background: #F3F4F6;
+}
+
+.invoiceIcon {
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+}
+
+.lightGrayText {
+    font-family: Inter;
+    text-align: left;
+    margin: 0rem;
+    margin-bottom: 0.28rem;
+    font-weight: 600;
+    font-size: 0.85rem;
+    line-height: 0.75rem;
+    letter-spacing: -0.21px;
+    color: #D2D5DA;
+}
+
+.darkGrayText {
+    font-family: Inter;
+    font-weight: 500;
+    text-align: left;
+    margin: 0rem;
+    margin-top: 0.5rem;
+    font-size: 0.975rem;
+    line-height: 1rem;
+    letter-spacing: -0.21px;
+    color: #9DA3AE;
+}
+
+.darkText {
+    margin: 0rem;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1rem;
+    letter-spacing: -0.21px;
+    color: #4D5562;
+}
+
+.paddedContentContainer {
+    width: 100%;
+    min-height: 100%;
+    padding: 2.5rem 1.8rem 0rem 1.8rem;
+}
+
+.componentSpaceBetweenFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.invoiceNumber {
+    font-family: Inter;
+    margin: 0rem;
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.9rem;
+    letter-spacing: -0.21px;
+    color: #4D5562;
+}
+
+.spacer {
+    margin-top: 2.3rem;
+}
+
+.invoiceProfile {
+    max-width: 12rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & img {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 100%;
+    }
+}
+
+.profileText {
+    margin-left: 1rem;
+}
+
+.clientProfile {
+    max-width: 12rem;
+    margin-top: 1rem;
+}
+
+.invoiceDivider {
+    width: 100%;
+    height: 1px;
+    background: #E5E7EB;
+}
+
+.createdInvoiceParticulars {
+    margin: 0.3rem 0rem 0.3rem 0rem;
+    padding: 0rem 1.8rem 0rem 1.8rem;
+}
+
+.createdInvoiceDefaultPadding {
+    padding: 0rem 1.8rem 0rem 1.8rem;
+}
+
+.createdInvoiceTotal {
+    color: #4D5562 !important;
+    font-weight: 600 !important;
+}
+
+.paymentDetailsText {
+    font-weight: 500;
+    text-align: left;
+    margin: 0rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    line-height: 1rem;
+    letter-spacing: -0.21px;
+    color: #9DA3AE;
+}
+
+.invoiceLink {
+    font-weight: 500;
+    text-align: left;
+    margin: 0rem;
+    font-size: 0.9rem;
+    line-height: 1rem;
+    letter-spacing: -0.21px;
+    cursor: pointer;
+    color: #9DA3AE;
+}
+
+.invoicePaymentBox {
+    padding: 1.5rem 1.8rem 2.3rem 1.8rem;
+}
+
+.createdInvoiceFinal {
+    margin: 1.5rem 0rem 1rem 0rem;
+    text-align: right;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1rem;
+    text-align: right;
+    letter-spacing: -0.21px;
+    color: #9DA3AE;
+    & span {
+        color: #4D5562;
+        font-weight: 700;
+    }
+}
+
+.payBtn {
+    width: 30%;
+    height: 2.8rem;
+    border: none;
+    background: rgb(189, 138, 255);
+    border-radius: 0.3rem;
+    font-family: inherit;
+    font-size: 0.85rem;
+    line-height: 1rem;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    &:hover {
+        background: rgb(189, 138, 255, 0.85);
+    }
+    &:disabled {
+        background: rgb(189, 138, 255, 0.85);
+        cursor: default;
+    }
+}
+
+.qrCode {
+    margin-top: 0.25rem;
+	width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.invoicePreview {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: calc(11rem + 34vw);
+    height: 100%;
+    padding-bottom: 3.6rem;
+    & > * {
+        margin-top: 2rem;
+    }
+}
+
+.invoiceBackground {
+	width: calc(11rem + 34vw);
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	right: 0;
+	background-image: url('../images/gradients/invoice.png');
+	background-size: cover;
+	background-position: center;
+}
+
+.invoicesContainer {
+    margin-top: 1.5rem;
+    min-height: 15vh;
+    width: calc(50rem + 23vw);
+    background: white;
+    margin-bottom: 4rem;
+}
+
+.invoicesHeader {
+    padding: 1rem 1.8rem 1rem 1.8rem;
+    width: 100%;
+    height: 3rem;
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.06);
+}
+
+.invoicesDetailsGrid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 2.8fr 0.9fr 0.9fr 0.9fr 0.9fr 0.8fr;
+}
+
+.invoicesLightTexts {
+    display: flex;
+    align-items: center;
+    font-family: Inter;
+    text-align: left;
+    font-weight: 500;
+    font-size: 0.97rem;
+    line-height: 1rem;
+    letter-spacing: -0.21px;
+    margin: 0rem;
+    color: #9DA3AE;
+}
+
+.invoicesDarkText {
+    display: flex;
+    align-items: center;
+    font-family: Inter;
+    text-align: left;
+    font-weight: 500;
+    font-size: 0.97rem;
+    line-height: 1rem;
+    letter-spacing: -0.21px;
+    margin: 0rem;
+    color: #4D5562;
+}
+
+.invoicesDetailsContainer {
+    padding: 2rem 1.8rem 2rem 1.8rem;
+    width: 100%;
+    & .invoicesDetailsGrid {
+        &:not(:first-child) {
+            margin-top: 2rem;
+        }
+    }
+}
+
+.invoicesSolIcon {
+    margin-left: 0.5rem;
+    & img {
+        width: 1rem;
+        height: 1rem;
+    }
+}
+
+.statusBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.97rem;
+    line-height: 1rem;
+    letter-spacing: -0.21px;
+    width: 7rem;
+    height: 2.5rem;
+    border-radius: 5rem;
+}
+
+.darkBlueText {
+    display: flex;
+    align-items: center;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 0.97rem;
+    line-height: 1rem;
+    letter-spacing: -0.21px;
+    color: #2652D0;
+}
+
+.showQR {
+	color: '#4D5562';
+	font-weight: 600;
+	cursor: pointer;
+	opacity: 0.75;
+	&:hover {
+		opacity: 1;
+	}
+}

@@ -1,0 +1,72 @@
+.transactionsContainer {
+	margin-top: 1.5rem;
+  min-height: 15vh;
+  width: calc(56rem + 28vw);
+  background: white;
+  margin-bottom: 4rem;
+}
+
+.transactionsHeader {
+	padding: 1rem 1.8rem 1rem 1.8rem;
+  width: 100%;
+  height: 3rem;
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.06);
+}
+
+.transactionsGrid {
+	display: grid;
+	width: 100%;
+	grid-template-columns: 2.5fr 2.5fr 2.5fr 2fr 2fr 1fr;
+}
+
+.transactionLightText {
+	display: flex;
+    align-items: center;
+    font-family: Inter;
+    text-align: left;
+    font-weight: 500;
+    font-size: 0.97rem;
+    line-height: 1rem;
+    letter-spacing: -0.21px;
+    margin: 0rem;
+    color: #9DA3AE;
+}
+
+.transactionDarkText {
+	display: flex;
+    align-items: center;
+    font-family: Inter;
+    text-align: left;
+    font-weight: 500;
+    font-size: 0.97rem;
+    line-height: 1rem;
+    letter-spacing: -0.21px;
+    margin: 0rem;
+    color: #4D5562;
+}
+
+.transactionItems {
+	padding: 2rem 1.8rem 2rem 1.8rem;
+    width: 100%;
+    & .transactionsGrid {
+        &:not(:first-child) {
+            margin-top: 2rem;
+        }
+    }
+}
+
+.transactionLinkImage {
+	width: 2rem;
+	border-radius: 100%;
+	object-fit: cover;
+}
+
+
+.transactionTokenIcon {
+	display: flex;
+    margin-left: 0.5rem;
+    & img {
+        width: 1rem;
+        height: 1rem;
+    }
+}

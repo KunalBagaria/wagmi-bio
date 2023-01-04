@@ -1,0 +1,78 @@
+@import "./Defaults.module.scss";
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 3rem;
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.08);
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 500;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0rem 0.25rem 1.5rem rgba(0, 0, 0, 0.03);
+    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+        -webkit-backdrop-filter: blur(3px);
+        backdrop-filter: blur(3px);
+    }
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px 0px 50px;
+    font-size: 1.0625rem;
+    & a {
+        padding: 0rem 1rem 0rem 1rem;
+        &:hover {
+            color: $link-hover;
+        }
+    }
+    & > * {
+        color: $link;
+    }
+    & .activeLink {
+        color: $link-active;
+        &:hover {
+            color: $link-active;
+        }
+    }
+    @media only screen and (max-width: 900px) {
+        display: none;
+    }
+}
+
+.connectButton {
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 4em;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    font-size: 1.0625rem;
+    outline: none;
+    color: $link;
+    padding: 0rem 1rem;
+    &:hover {
+        border: 0.1rem solid rgba(0, 0, 0, 0.15);
+        background: rgba(0, 0, 0, 0.025);
+    }
+    @media only screen and (max-width: 900px) {
+        display: none;
+    }
+}
+
+.logo {
+    cursor: pointer;
+}

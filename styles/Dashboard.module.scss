@@ -1,0 +1,414 @@
+.main {
+    width: 100vw;
+    min-height: 100vh;
+    height: max-content;
+    display: flex;
+    overflow-x: auto;
+    background: #F9F9F9;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 16.5rem;
+    min-height: 100%;
+    padding: 7rem 0rem;
+    border-right: 0.1rem solid #F1F1F1;
+    background: white;
+    @media only screen and (max-width: 1100px){
+        display: none;
+    }
+}
+
+.createBtnParent {
+    width: 100%;
+    padding: 0rem 1.1rem;
+}
+
+.createButton {
+    width: 100%;
+    height: 2.8125rem;
+    background: #4B83EE;
+    border: none;
+    border-radius: 0.35rem;
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0rem;
+    font-weight: 600;
+    margin-bottom: 1.625rem;
+    overflow: hidden;
+
+    & .createBtnArrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 20%;
+        background: #4C88FD;
+    }
+
+    & .plusIcon {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-left: 0.7rem;
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    & span {
+        margin-right: 1rem;
+    }
+
+    &:hover {
+        background: #4C88FD;
+    }
+}
+
+.linksContainer {
+    padding: 7rem 2.875rem;
+    height: 100%;
+}
+
+.stats {
+    display: grid;
+    max-width: max-content;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 1.2rem;
+    grid-row-gap: 1.2rem;
+    @media only screen and (max-width: 1880px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media only screen and (max-width: 1280px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media only screen and (max-width: 700px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.chartsBox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: #FFFFFF;
+    border: 0.1rem solid #F2F2F2;
+    border-radius: 0.26rem;
+    width: 22.5rem;
+    height: 6.375rem;
+
+    // @media only screen and (max-width: 900px) {
+    //     margin: 0rem;
+    //     &:nth-child(2) {
+    //         margin: 0.5rem 0rem 0.5rem 0rem;
+    //     }
+    // }
+
+    & img {
+        width: 3.5rem;
+        margin-left: 2rem;
+    }
+
+    & p {
+        text-align: left;
+        margin: 0rem;
+        margin-left: 2rem;
+    }
+
+    & .chartHeading {
+        font-weight: 500;
+        font-size: 1.05rem;
+        line-height: 1.2rem;
+        letter-spacing: -0.21px;
+        color: rgba(42, 49, 75, 0.42);
+        font-family: inherit;
+    }
+
+    & .chartNumbers {
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+        letter-spacing: -0.21px;
+        color: rgb(42, 49, 75, 0.95);
+        font-family: inherit;
+        font-weight: bold;
+        margin-top: 0.3rem;
+
+        & span {
+            padding-left: 1rem;
+            font-family: inherit;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 1rem;
+            line-height: 1.2rem;
+            color: #4BCAA4;
+        }
+    }
+}
+
+.linkDetails {
+    margin-top: 0.635rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid #F1F1F1;
+}
+
+.dashboardGrid {
+    display: grid;
+    width: 100%;
+    margin-top: 1.375rem;
+    grid-template-columns: 17rem 10.55rem 10.55rem 10.55rem 10.55rem 10.55rem;
+    @media only screen and (max-width: 980px){
+        display: none;
+    }
+}
+
+.dashboardTagLabel {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgba(42, 49, 75, 0.76);
+}
+
+.dashboardTagValue {
+    margin: 0px;
+    line-height: 1.1rem;
+    letter-spacing: -0.21px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(42, 49, 75, 0.48);
+}
+
+.dashInfo {
+    line-height: 1.1rem;
+    letter-spacing: -0.21px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(42, 49, 75, 0.48);
+}
+
+.editIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+}
+
+.sidebarButton {
+    box-sizing: border-box;
+    font-family: inherit;
+    color: rgba(42, 49, 75, 0.47);
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.15rem;
+    letter-spacing: -0.21px;
+    height: 2.8125rem;
+    width: 100%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    background: none;
+    padding: 0px;
+    margin-bottom: 0.5rem;
+    & span {
+        margin-left: 1rem;
+    }
+    &:hover {
+        background: rgba(55, 123, 255, 0.13);
+        color: rgba(42, 49, 75, 0.76);
+        & svg {
+            fill: #377BFF;
+        }
+    }
+    & svg {
+        margin-left: 1.6875rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.activeSideBtn {
+    width: 100%;
+    & button {
+        // border-left: 0.3rem solid #9CC5F8;
+        background: rgba(55, 123, 255, 0.13);
+        color: rgba(42, 49, 75, 0.76);
+        & svg {
+            fill: rgb(55, 123, 255, 1);
+        }
+    }
+}
+
+.inActiveSideBtn {
+    width: 100%;
+    & button {
+        background: none;
+        color: rgba(42, 49, 75, 0.47);
+        & svg {
+            fill: rgba(42, 49, 75, 0.47);
+        }
+    }
+}
+
+
+.infoMessages {
+    padding: 7rem 2.875rem;
+}
+
+.linksGrid {
+    margin-top: 1.375rem;
+    display: grid;
+    max-width: max-content;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 1.2rem;
+    grid-row-gap: 1.2rem;
+    @media only screen and (max-width: 1880px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media only screen and (max-width: 1280px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media only screen and (max-width: 700px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.linkBox {
+    border: 0.1rem solid #F2F2F2;
+    cursor: pointer;
+    width: 22.5rem;
+    height: 8.9375rem;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    border-radius: 0.45rem;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        box-shadow: 0px 0.25rem 1.5rem rgba(0, 0, 0, 0.08);
+    }
+}
+
+.linkHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 1rem 1.5rem 1.5rem 1.5rem;
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.03);
+    & img {
+        border-radius: 100%;
+        width: 2.8125rem;
+        height: 2.8125rem;
+        object-fit: cover;
+    }
+}
+
+.boxLinkProfile {
+    margin-left: 1.5rem;
+    & .boxLightText {
+        margin-top: 0.2rem;
+        font-size: 1rem;
+    }
+}
+
+.boxNameTag {
+    font-weight: bold;
+    font-size: 1.21rem;
+    line-height: 1.45rem;
+    margin: 0rem;
+    letter-spacing: -0.21px;
+    color: rgba(42, 49, 75, 0.95);
+}
+
+.boxLightText {
+    font-weight: 500;
+    line-height: 1.21rem;
+    margin: 0rem;
+    letter-spacing: -0.21px;
+    color: rgba(42, 49, 75, 0.42);
+}
+
+.boxFooter {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 0rem 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+    & .boxFooterSection {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.boxLinkStats {
+    font-weight: 500;
+    line-height: 1.21rem;
+    margin-right: 1.5rem;
+    letter-spacing: -0.21px;
+    color: rgba(42, 49, 75, 0.42);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    & span {
+        display: flex;
+        align-items: center;
+    }
+    & img {
+        width: 1rem;
+        height: 1rem;
+    }
+    & .boxVisits {
+        margin-left: 0.5rem;
+    }
+    & p {
+        margin: 0rem;
+    }
+}
+
+.boxCopy {
+    cursor: pointer;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 1.5rem;
+}
+
+.dashboardHeading {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.35rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.21px;
+    margin: 0rem;
+    color: #394150;
+}
+
+.dashboardSubHeading {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.1875rem;
+    margin-top: 0.75rem;
+    line-height: 1.21rem;
+    letter-spacing: -0.21px;
+    color: #9DA3AE;
+}
+
+.dashboardHeadingGap {
+    height: max-content;
+    margin-top: 3rem;
+}

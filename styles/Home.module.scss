@@ -1,0 +1,542 @@
+@import "./Defaults.module.scss";
+
+@font-face {
+	font-family: "Eudoxus Sans";
+	src: url("/fonts/EudoxusSans-Bold.ttf");
+	font-style: bold;
+	font-weight: 700;
+	font-display: swap;
+}
+
+.header {
+	max-width: 31.25rem;
+
+	& img {
+		max-width: 3.5rem !important;
+	}
+
+	@media only screen and (max-width: 900px) {
+		margin-top: 8rem;
+	}
+}
+
+.heading {
+	color: $main-text;
+	font-size: 2.8rem;
+	font-family: 'Eudoxus Sans', sans-serif;
+	font-weight: 700;
+}
+
+.subheading {
+	color: rgba(37, 53, 61, 0.53);
+	font-size: 1.5rem;
+}
+
+.inputParent {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 4rem;
+	color: rgba(164, 179, 192, 1);
+	border: 0.1rem solid #A4B3C0;
+	box-sizing: border-box;
+	border-radius: 9px;
+	font-size: 1rem;
+	font-weight: bold;
+	outline: none;
+
+	&:focus-within {
+		border: 0.1rem solid rgba(55, 123, 255, 0.41);
+	}
+
+	&>label {
+		padding: 0rem 1.5rem 0rem 1.5rem;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		border-right: 0.1rem solid #A4B3C0;
+		font-size: 1.2rem;
+	}
+}
+
+.input {
+	font-family: inherit;
+	font-weight: bold;
+	background: none;
+	outline: none;
+	border: none;
+	padding-left: 1rem;
+	color: rgba(164, 179, 192, 1);
+	font-size: 1rem;
+	outline: none;
+	font-size: 1.2rem;
+	height: 100%;
+	width: 100%;
+
+	&::placeholder {
+		font-size: 1.2rem;
+		color: rgba(164, 179, 192, 0.75);
+	}
+}
+
+.button {
+	font-family: inherit;
+	font-size: 1rem;
+	font-weight: bold;
+	width: 100%;
+	height: 3.75rem;
+	background: hsl(220, 100%, 61%);
+	border-radius: 9px;
+	color: white;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	margin-top: 2rem;
+
+	&:hover {
+		background: hsl(220, 98%, 65%);
+	}
+}
+
+.gradientContainer {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	position: relative;
+}
+
+.bgGradient {
+	padding-top: 2rem !important;
+	width: 31.4375rem;
+}
+
+.fixedBox {
+	position: absolute;
+	top: 0;
+}
+
+.pubKeyBox {
+	width: 22.5rem;
+	height: 5.125rem;
+	background: #FFFFFF;
+	box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.08);
+	border-radius: 1rem;
+	color: rgba(0, 0, 0, 0.44);
+	font-size: 1.2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+
+	& .pubKeyEmoji {
+		max-width: 2.6rem;
+	}
+}
+
+.linkBox {
+	background: #F4F6F7;
+	width: 100%;
+	height: 2.875rem;
+	border-radius: 0.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	color: rgba(0, 0, 0, 0.49);
+	letter-spacing: -0.21px;
+	font-size: 1.18rem;
+	margin-bottom: 2.25rem;
+
+	& img {
+		padding: 0rem 1rem 0rem 1rem !important;
+		width: 1rem;
+	}
+}
+
+.arrow {
+	position: absolute;
+	top: 3.5rem;
+	left: -3rem;
+
+	@media only screen and (max-width: 900px) {
+		width: 1rem;
+		left: 2.5rem;
+	}
+}
+
+.featureHeading {
+	color: rgba(37, 53, 61, 0.43);
+	font-size: 2.125rem;
+	line-height: 2.8125rem;
+	font-family: 'Eudoxus Sans', 'Inter', sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	margin: 0rem;
+	margin-top: 4rem;
+
+	@media only screen and (min-width: 900px) {
+		margin-top: 8rem;
+	}
+
+	& span {
+		color: #25353D;
+		padding-right: 0.3rem;
+	}
+}
+
+.featureSection {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	max-width: 1200px;
+	width: 100%;
+	margin-top: 12rem;
+	margin-bottom: 3.6875rem;
+
+	@media only screen and (max-width: 900px) {
+		max-width: 31.25rem;
+	}
+}
+
+.featureParent {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.featureGradient {
+	width: 100vw;
+	height: 22.625rem;
+	// margin-bottom: 5rem;
+}
+
+.getStartedSection {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 2.05rem;
+	background: #377BFF;
+	height: 29.125rem;
+	width: 100%;
+	background-image: url(../images/gradients/landing-6.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	& .getStartedChild {
+		max-width: 37rem;
+		padding: 0rem 3rem 0rem 3rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		& h1 {
+			color: white;
+			font-family: 'Eudoxus Sans', 'Inter', sans-serif;
+			font-size: 2.8125rem;
+			text-align: center;
+			margin-top: 0px;
+
+			@media only screen and (max-width: 900px) {
+				font-size: 2rem;
+			}
+		}
+
+		& form {
+			max-width: 37rem;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+		}
+	}
+}
+
+.customizeText {
+	font-weight: 500;
+	font-size: 1.05rem;
+	line-height: 1.3rem;
+	letter-spacing: -0.21px;
+	color: #A4B3C0;
+}
+
+.gradientIcon {
+	max-width: 7rem !important;
+}
+
+.getStartedInputParent {
+	background: rgba(255, 255, 255, 0.21);
+	border: 0.1rem solid #FFFFFF;
+	box-sizing: border-box;
+	border-radius: 0.5625rem;
+	width: 100%;
+	height: 3.75rem;
+	display: flex;
+	align-items: center;
+	font-size: 1.2rem;
+
+	@media only screen and (max-width: 1100px) {
+		width: 75%;
+	}
+
+	& label {
+		color: white;
+		font-weight: 500;
+		font-family: inherit;
+		padding-left: 1rem;
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
+}
+
+.getStartedInput {
+	height: 100%;
+	background: transparent;
+	border: none;
+	outline: none;
+	font-family: inherit;
+	color: white;
+	padding-left: 1rem;
+	font-weight: 500;
+
+	&::placeholder {
+		color: rgb(255, 255, 255, 0.5)
+	}
+}
+
+.getStartedButton {
+	width: 100%;
+	margin-top: 1rem;
+	height: 3.75rem;
+	font-weight: bold;
+	font-size: 1.2rem;
+	line-height: 1.8rem;
+	letter-spacing: -0.21px;
+	color: #377BFF;
+	background: white;
+	cursor: pointer;
+	border: none;
+	border-radius: 0.5625rem;
+
+	@media only screen and (max-width: 1100px) {
+		width: 75%;
+	}
+
+	&:hover {
+		background: rgba(255, 255, 255, 0.89);
+	}
+}
+
+.topDashboardBox {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+
+	@media only screen and (max-width: 900px) {
+		flex-direction: column;
+	}
+
+	&>.chartsBox {
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		background: #FFFFFF;
+		box-shadow: 0px 0.25rem 2rem rgba(0, 0, 0, 0.08);
+		border-radius: 0.9rem;
+		width: 16.4375rem;
+		height: 5.125rem;
+		margin: 0rem 1.2rem 0rem 1.2rem;
+
+		@media only screen and (max-width: 900px) {
+			margin: 0rem;
+
+			&:nth-child(2) {
+				margin: 0.5rem 0rem 0.5rem 0rem;
+			}
+		}
+
+		& img {
+			width: 3.5rem;
+		}
+
+		& p {
+			text-align: left;
+			margin: 0rem;
+		}
+
+		& .chartHeading {
+			font-weight: 500;
+			font-size: 1.05rem;
+			line-height: 1.2rem;
+			letter-spacing: -0.21px;
+			color: rgba(42, 49, 75, 0.42);
+			font-family: inherit;
+		}
+
+		& .chartNumbers {
+			font-size: 1.3rem;
+			line-height: 1.5rem;
+			letter-spacing: -0.21px;
+			color: rgb(42, 49, 75, 0.95);
+			font-family: inherit;
+			font-weight: bold;
+			margin-top: 0.3rem;
+
+			& span {
+				padding-left: 1rem;
+				font-family: inherit;
+				font-style: normal;
+				font-weight: bold;
+				font-size: 1rem;
+				line-height: 1.2rem;
+				color: #4BCAA4;
+			}
+		}
+	}
+}
+
+.customizeIcons {
+	& img {
+		position: absolute;
+		z-index: 99;
+
+		@media only screen and (max-width: 1100px) {
+			width: 30%;
+		}
+	}
+}
+
+.linkUrlIcon {
+	top: 7rem;
+	left: -5rem;
+
+	@media only screen and (max-width: 1100px) {
+		left: 0rem;
+	}
+}
+
+.nameBioIcon {
+	top: 10.5rem;
+	right: -4rem;
+
+	@media only screen and (max-width: 1100px) {
+		right: 0rem;
+	}
+}
+
+.profilePictureIcon {
+	top: 13rem;
+	left: -6rem;
+
+	@media only screen and (max-width: 900px) {
+		width: 20%;
+		left: 0rem;
+	}
+}
+
+.featuresAbsolute {
+	position: absolute;
+	width: 100%;
+	padding: 0rem 3rem 0rem 3rem;
+	display: flex;
+	justify-content: center;
+}
+
+.featuresBox {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	margin-top: 2.875rem;
+	width: 100%;
+	height: 20rem;
+	background: #FFFFFF;
+	box-shadow: 0px 0.25rem 2rem rgba(0, 0, 0, 0.08);
+	border-radius: 0.9rem;
+	max-width: 1200px;
+	overflow: auto;
+	scrollbar-width: thin;
+	@media screen and (max-width: 1100px) {
+		height: 28rem;
+		grid-template-columns: 1fr 1fr;
+	}
+	@media screen and (max-width: 900px) {
+		grid-template-columns: 1fr;
+	}
+}
+
+.featuresBoxSection {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	padding: 3rem 2.5rem 0rem 2.5rem;
+	// align-items: center;
+	@media screen and (min-width: 1100px) {
+		&:not(:last-child) {
+			border-right: 0.1rem solid #DBDBDB;
+		}
+	}
+	&:last-child {
+		@media screen and (max-width: 1100px) {
+			margin-bottom: 3rem;
+		}
+	}
+}
+
+.featuresBoxFeature {
+	display: flex;
+	height: max-content;
+	align-items: flex-start;
+	justify-content: flex-start;
+	@media screen and (max-width: 1100px) {
+		&:not(:first-child) {
+			margin-top: 1rem;
+		}
+	}
+}
+
+.secondOverviewFixedBox {
+	position: absolute;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.transactionsBox {
+	height: 20rem;
+	margin-top: 2.875rem;
+	background: #FFFFFF;
+	box-shadow: 0px 0.25rem 2.05rem rgba(0, 0, 0, 0.08);
+	border-radius: 0.87rem;
+	position: relative;
+}
+
+.divider {
+	position: absolute;
+	width: 100%;
+	top: 4rem;
+	left: 0;
+	border-bottom: 0.1rem solid #F1F1F1;
+}
+
+.transactionsGrid {
+	display: grid;
+	grid-template-columns: 10rem 6.5rem 6.5rem;
+	grid-column-gap: 1.5rem;
+	line-height: 1.1rem;
+	letter-spacing: -0.21px;
+
+	& p {
+		margin: 0.8rem 0rem;
+	}
+
+	font-size: 1rem;
+	font-weight: 500;
+	color: rgba(42, 49, 75, 0.48);
+}
+
+.transactionsTag {
+	font-size: 1.1rem;
+	font-weight: 600;
+	color: rgba(42, 49, 75, 0.76);
+}
