@@ -37,7 +37,7 @@ export const buyDomain = async (
     const _signature = await sendMoney(wagmiPublicKey, cost, false);
     if (_signature) signature = _signature; else return;
   } else {
-    const bonkToBurn = plan === 1 ? 10**6 : 10**7;
+    const bonkToBurn = plan === 1 ? 10**5 : 10**6;
     const _signature = await burnSPL('DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263', bonkToBurn, 5);
     if (_signature) signature = _signature; else return;
   }
