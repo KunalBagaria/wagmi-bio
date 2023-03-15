@@ -11,6 +11,7 @@ import getWallet from '@/util/whichWallet';
 import {
   getOTP,
 } from './GetOTP';
+import { getConnection } from './SendSPL';
 
 declare global {
   interface Window {
@@ -62,11 +63,7 @@ export const sendMoney = async (
 ) => {
   const wallet = getWallet();
   const publicKey = await connectWallet();
-  console.log(publicKey);
-  const network = 'https://solana-mainnet.g.alchemy.com/v2/22rQ_17IgqNqjh6L3zozhPBksczluake';
-  const connection = new Connection(network, {
-    commitment: 'processed'
-  });
+  const connection = getConnection();
 
   const transaction = new Transaction()
     .add(
@@ -86,11 +83,10 @@ export const sendMoney = async (
     );
   }
 
-  const {
-    blockhash,
-  } = await connection.getRecentBlockhash();
+  const {blockhash} = await connection.getLatestBlockhash('finalized');
   transaction.recentBlockhash = blockhash;
   transaction.feePayer = publicKey;
+
   const signedTransaction = await wallet.signTransaction(transaction);
   try {
     const txid = await connection.sendRawTransaction(signedTransaction.serialize());

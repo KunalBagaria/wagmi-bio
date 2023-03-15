@@ -5,8 +5,8 @@ import {
   Keypair
 } from '@solana/web3.js';
 import {
-  TOKEN_PROGRAM_ID,
-  Token
+  createBurnInstruction,
+  getAssociatedTokenAddressSync
 } from '@solana/spl-token';
 import {
   toast,
@@ -23,51 +23,35 @@ export const burnSPL = async (
 ) => {
   const wallet = getWallet();
   const burner = await connectWallet();
-
-  // Construct wallet keypairs
-  const fromWallet = Keypair.generate();
   const connection = new Connection('https://solana-mainnet.g.alchemy.com/v2/22rQ_17IgqNqjh6L3zozhPBksczluake', {
     commitment: 'processed'
   });
 
-  // Construct my token class
-  const SPL_pubkey = new PublicKey(mint);
-  const SPL_Token = new Token(
-    connection,
-    SPL_pubkey,
-    TOKEN_PROGRAM_ID,
-    fromWallet,
+  const burnerAccountAddress = getAssociatedTokenAddressSync(
+    new PublicKey(mint),
+    burner
   );
+  const burnerAccount = await connection.getAccountInfo(burnerAccountAddress);
 
-  let fromTokenAccount;
-
-  try {
-    fromTokenAccount = await SPL_Token.getOrCreateAssociatedAccountInfo(burner);
-    // Create associated token accounts for the recipient if they don't exist yet
-  } catch (error: any) {
-    toast.error(`${error.message} for SPL token of the burner`);
-    return;
+  if (burnerAccount === null) {
+    console.log('Burner account does not exist');
+    return null;
   }
 
   const transaction = new Transaction();
 
   // Add token burn instructions to transaction
   transaction.add(
-    Token.createBurnInstruction(
-      SPL_Token.programId,
-      SPL_pubkey,
-      fromTokenAccount.address,
+    createBurnInstruction(
+      burnerAccountAddress,
+      new PublicKey(mint),
       burner,
-      [],
       amount * (10 ** decimals)
     )
   );
 
   let signedTransaction: any = null;
-  const {
-    blockhash,
-  } = await connection.getRecentBlockhash();
-
+  const {blockhash} = await connection.getLatestBlockhash('finalized');
   transaction.recentBlockhash = blockhash;
   transaction.feePayer = burner;
 
