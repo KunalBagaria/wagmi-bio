@@ -67,7 +67,7 @@ async function getTransferTokenTransaction(
       senderAccountAddress,
       receiverAccountAddress,
       fromAddress,
-      Number(amount) * 10 ** decimals,
+      Number(amount.toFixed(6)) * 10 ** decimals,
     ),
   );
 

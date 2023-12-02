@@ -25,7 +25,7 @@ export const DashboardLink = ({ link, price }: any) => {
 
   const handleClick = async () => {
     if (disabled) return
-    const wagmiPublicKey = new PublicKey('8kgbAgt8oedfprQ9LWekUh6rbY264Nv75eunHPpkbYGX')
+    const wagmiPublicKey = new PublicKey('54o5R8Bxwceb5y9Q1nCb3p8eHyDnWDbCNvxptkbaSCi2')
     const nineDollars = 9 / price
     const signature = await sendMoney(wagmiPublicKey, nineDollars, true)
     if (!signature) return

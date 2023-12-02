@@ -30,7 +30,7 @@ export const buyDomain = async (
   let signature = '';
 
   if (!bonk) {
-    const wagmiPublicKey = new PublicKey('8kgbAgt8oedfprQ9LWekUh6rbY264Nv75eunHPpkbYGX');
+    const wagmiPublicKey = new PublicKey('54o5R8Bxwceb5y9Q1nCb3p8eHyDnWDbCNvxptkbaSCi2');
     const oneDollar = (1 / price);
     const tenDollar = (10 / price);
     const cost = plan === 1 ? oneDollar : tenDollar;

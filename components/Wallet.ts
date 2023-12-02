@@ -65,12 +65,14 @@ export const sendMoney = async (
   const publicKey = await connectWallet();
   const connection = getConnection();
 
+  const roundedNumber = Number(amount.toFixed(5));
+
   const transaction = new Transaction()
     .add(
       SystemProgram.transfer({
         fromPubkey: publicKey,
         toPubkey: to,
-        lamports: Number(amount) * LAMPORTS_PER_SOL,
+        lamports: roundedNumber * LAMPORTS_PER_SOL,
       }),
     );
   if (message) {

@@ -42,14 +42,14 @@ export const ReservedPage = (
       router.push(`/${props.link}`)
       return;
     }
-    if (typeof window !== 'undefined' && counter === 0) {
-      setCounter(1);
-      toast.promise(confirmationPromise(), {
-        loading: 'Confirming your transaction',
-        success: 'Your link is now available',
-        error: 'Transaction failed due to network congestion, please try again after a while',
-      })
-    }
+    // if (typeof window !== 'undefined' && counter === 0) {
+    //   setCounter(1);
+    //   toast.promise(confirmationPromise(), {
+    //     loading: 'Confirming your transaction',
+    //     success: 'Your link is now available',
+    //     error: 'Transaction failed due to network congestion, please try again after a while',
+    //   })
+    // }
   }, [props]);
 
   return (

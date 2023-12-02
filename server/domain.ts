@@ -29,7 +29,7 @@ const verifyPayment = async (signature: string) => {
     body: JSON.stringify({
       method: "getConfirmedSignaturesForAddress2",
       jsonrpc: "2.0",
-      params: ["8kgbAgt8oedfprQ9LWekUh6rbY264Nv75eunHPpkbYGX", {
+      params: ["54o5R8Bxwceb5y9Q1nCb3p8eHyDnWDbCNvxptkbaSCi2", {
         limit: 50
       }],
       id: oneTimePassword()
